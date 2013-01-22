@@ -10,4 +10,5 @@ class SiteController < ApplicationController
 
   def pricing
   end
+
 end
