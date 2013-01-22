@@ -1,4 +1,12 @@
 Turnrelay::Application.routes.draw do
+  get "site/home"
+
+  get "site/help"
+
+  get "site/features"
+
+  get "site/pricing"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
