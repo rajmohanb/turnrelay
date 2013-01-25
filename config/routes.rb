@@ -1,11 +1,14 @@
 Turnrelay::Application.routes.draw do
-  get "site/home"
 
-  get "site/help"
+  root :to => 'site#home'
 
-  get "site/features"
+  match '/help',      to:'site#help'
+  match '/features',  to:'site#features'
+  match '/pricing',   to:'site#pricing'
+  match '/blog',      to:'site#blog'
 
-  get "site/pricing"
+  match '/contact',   to:'site#contact'
+  match '/about',     to:'site#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

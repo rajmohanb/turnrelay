@@ -8,7 +8,15 @@ class SiteController < ApplicationController
   def features
   end
 
-  def pricing
+  def blog
   end
 
+  def signin
+  end
+
+  def about
+  end
+
+  def contact
+  end
 end
