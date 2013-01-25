@@ -1,5 +1,7 @@
 Turnrelay::Application.routes.draw do
 
+  devise_for :users
+
   root :to => 'site#home'
 
   match '/help',      to:'site#help'
