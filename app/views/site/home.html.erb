@@ -1,5 +1,16 @@
 <% provide(:title, 'Home') %>
-<div class="row">
-  <div class="span4 offset8">
-  </div>
+<div>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <div class="row">
+      <div class="span4 offset2">
+        <%= render 'layouts/signup' %>
+      </div>
+      <!-- <div class="span6">
+        <%= render 'layouts/signin' %>
+      </div> -->
+    </div>
+  <% end %>
 </div>
