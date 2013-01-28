@@ -5,7 +5,10 @@
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
     <div class="row">
-      <div class="span4 offset2">
+      <div class="span 8">
+        <img src="http://placehold.it/600x450" />
+      </div>
+      <div class="span3 offset1">
         <%= render 'layouts/signup' %>
       </div>
       <!-- <div class="span6">
