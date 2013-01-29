@@ -4,7 +4,7 @@
     Signed in as <%= current_user.email %>. Not you?
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
-    <div class="row">
+    <div class="row user-nav">
       <div class="span 8">
         <img src="http://placehold.it/600x450" />
       </div>
