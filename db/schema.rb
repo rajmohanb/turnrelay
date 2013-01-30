@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130125194340) do
+ActiveRecord::Schema.define(:version => 20130130065127) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(:version => 20130125194340) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "max_allocs"
+    t.integer  "max_concur_allocs"
+    t.string   "realm"
+    t.string   "username"
+    t.string   "password"
+    t.integer  "def_lifetime"
+    t.integer  "max_bandwidth"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
