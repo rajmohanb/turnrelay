@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
   attr_accessible :max_allocs, :max_concur_allocs, :realm, :username, :password
   attr_accessible :def_lifetime, :max_bandwidth
   # attr_accessible :title, :body
+  
+  # association with the allocations model
+  has_many :allocations, dependent: :destroy
 end
