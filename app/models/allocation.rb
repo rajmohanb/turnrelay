@@ -4,5 +4,10 @@ class Allocation < ActiveRecord::Base
   # association with the user model
   belongs_to :user
 
+  # some validations
+  validates :user_id, presence: true
+  validates :username, presence: true
+  validates :realm, presence: true
+
   default_scope order: 'allocations.created_at DESC'
 end
