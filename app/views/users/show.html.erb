@@ -1,4 +1,11 @@
 <h1>Users#show</h1><br />
 <h2>User: <%= @user.email %></h2>
 
-<h3> Number of Allocations: <%= @user.allocations.count %>
+<h3> Number of Allocations: <%= @user.allocations.count %> </h3>
+
+<% if @user.allocations.any? %>
+  <h3>Number of Allocations (<%= @user.allocations.count %>)</h3>
+  <ol>
+    <%= render @user.allocations %>
+  </ol>
+<% end %>
