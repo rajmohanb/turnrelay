@@ -1,19 +1,14 @@
 <% provide(:title, 'Home') %>
 <div>
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. Not you?
-    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <div class="row user-nav">
-      <div class="span 8">
-        <img src="http://placehold.it/600x450" />
-      </div>
-      <div class="span3 offset1">
-        <%= render 'layouts/signup' %>
-      </div>
-      <!-- <div class="span6">
-        <%= render 'layouts/signin' %>
-      </div> -->
+  <div class="row user-nav">
+    <div class="span 8">
+      <img src="http://placehold.it/600x450" />
     </div>
-  <% end %>
+    <div class="span3 offset1">
+      <%= render 'layouts/signup' %>
+    </div>
+    <!-- <div class="span6">
+      <%= render 'layouts/signin' %>
+    </div> -->
+  </div>
 </div>
