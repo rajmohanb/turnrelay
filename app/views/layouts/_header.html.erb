@@ -1,17 +1,24 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar transparent navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "SeamConnect", root_path, id: "logo" %>
+      <a class="brand">
+        <%= link_to "SeamConnect", root_path, id: "logo" %>
+      </a>
       <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home",     root_path %></li>
+        <ul class="nav">
+            <li><!-- <i class="icon-home icon-white"></i> -->
+            <%= link_to "Home",     root_path %></li>
           <li><%= link_to "Features", features_path %></li>
           <li><%= link_to "Blog",     blog_path %></li>
+        </ul>
+        <ul class="nav pull-right">
           <% if user_signed_in? %>
-              <li><%= link_to "Sign Out",  
+              <li><!-- <i class="icon-user icon-white"></i> -->
+              <%= link_to "Sign Out",  
                   destroy_user_session_path, :method => :delete %></li>
           <% else %>
-            <li><%= link_to "Sign In",  new_user_session_path %></li>
+              <li><!-- <i class="icon-user icon-white"></i> -->
+              <%= link_to "Sign In",  new_user_session_path %></li>
           <% end %>
         </ul>
       </nav>

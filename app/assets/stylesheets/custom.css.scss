@@ -1,4 +1,110 @@
 @import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+
+body.pull_top {
+    padding-top: 0px !important;
+}
+
+.mb-home-signup-large {
+    padding: 9px 91px;
+}
+
+.hero-unit {
+    /* background: url(/mb_domain.jpg); */
+    /* background: url(/cloud_nat.jpg); */
+    /* background: url(/mobile_cloud_webcast_webinar_iStock_000017122593Large.jpg); */
+    /* background-color: #ffffff; */
+}
+
+.mb_domain {
+    /* background: url(/cloud_nat.jpg); */
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+    /* background: rgba(0,0,0,0.4); */
+    /* background: rgba(111,100,236,0.4); */
+    border-bottom: 1px solid rgb(88, 88, 88);
+    color: #6f64ec
+}
+
+.navbar.transparent.navbar-inverse .navbar-inner .container {
+    background: rgba(0,136,204,0.4);
+    color: #6f64ec;
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+    -webkit-transition: margin .2s ease-in-out;
+    -moz-transition: margin .2s ease-in-out;
+    transition: margin .2s ease-in-out;
+}
+
+.navbar.inverse {
+    color: #6f64ec;
+}
+
+.navbar-inverse .navbar-inner {
+  /* background-color: #6f64ec; */
+  background-color: #357fcf;
+  background-image: -moz-linear-gradient(top, #357fcf, #357fcf);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#357fcf), to(#357fcf));
+  background-image: -webkit-linear-gradient(top, #357fcf, #357fcf);
+  background-image: -o-linear-gradient(top, #357fcf, #357fcf);
+  background-image: linear-gradient(to bottom, #357fcf, #357fcf);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF357fcf', endColorstr='#FF357fcf', GradientType=0);
+  border-color: #252525;
+}
+
+.carousel {
+  margin-bottom: 60px;
+}
+
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+}
+
+.carousel .item {
+  height: 416px;
+  /* height: 500px; */
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 416px;
+  /* height: 500px; */
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+
 
 /* mixins, variables, etc. */
 
@@ -10,9 +116,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
 
 section {
   overflow: auto;
@@ -75,6 +178,10 @@ p {
   }
 }
 
+header {
+    background: rgba(0,0,0,.6) !important;
+}
+
 /* footer */
 
 footer {
@@ -89,7 +196,7 @@ footer {
     }
   }  
   small { 
-    float: left; 
+    float: none; 
   }
   ul {
     float: right;
@@ -97,6 +204,15 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+    }
+  }
+
+  ull {
+    float: left;
+    list-style: none;
+    li {
+      float: right;
+      margin-right: 10px;
     }
   }
 }
@@ -107,9 +223,24 @@ header nav ul {
   margin: 0 0 2em;
   padding: 0;
 }
+
+header {
+  background-color: rgb(255, 255, 255);
+}
+
 header nav ul li {
   display: inline;
 }
+
+.navbar-inverse .nav > li > a {
+  color: #ffffff;
+}
+
+.navbar-inverse {
+  color: #ffffff;
+}
+
+
 #flash_notice, #flash_alert {
   padding: 5px 8px;
   margin: 10px 0;
@@ -122,3 +253,17 @@ header nav ul li {
   background-color: #FCC;
   border: solid 1px #C66;
 }
+
+.content {
+  background-color: #eee;
+  padding: 20px;
+  margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+  box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
+

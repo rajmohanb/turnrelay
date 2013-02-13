@@ -21,6 +21,9 @@ Turnrelay::Application.routes.draw do
   match '/contact',   to:'site#contact'
   match '/about',     to:'site#about'
 
+  match '/privacy',   to:'site#privacy'
+  match '/terms',     to:'site#terms'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
