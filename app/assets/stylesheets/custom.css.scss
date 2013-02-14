@@ -7,8 +7,51 @@ body.pull_top {
 }
 
 .mb-home-signup-large {
-    padding: 9px 91px;
+  padding: 9px 91px;
 }
+
+#allocations1 {
+  font-size: 85%;
+  td {
+    text-align: center;
+  }
+  th {
+    text-align: center;
+    background-color: #ffcccc;
+  }
+}
+
+#allocations_info1 {
+  font-size: 85%;
+}
+
+#allocations_wrapper {
+  font-size: 85%;
+  td {
+    text-align: center;
+  }
+  th {
+    text-align: center;
+    background-color: #ffcccc;
+  }
+  .row-fluid {
+    font-size: 85%;
+  }
+}
+
+#allocations_filter1 {
+  font-size: 85%;
+}
+
+#allocations_length1 {
+  font-size: 85%;
+}
+
+.dataTables_paginate1 {
+  font-size: 85%;
+}
+
+
 
 .hero-unit {
     /* background: url(/mb_domain.jpg); */
@@ -32,7 +75,7 @@ body.pull_top {
     background: rgba(0,136,204,0.4);
     color: #6f64ec;
     /* margin-top: 10px; */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     -webkit-transition: margin .2s ease-in-out;
     -moz-transition: margin .2s ease-in-out;
     transition: margin .2s ease-in-out;
@@ -43,7 +86,6 @@ body.pull_top {
 }
 
 .navbar-inverse .navbar-inner {
-  /* background-color: #6f64ec; */
   background-color: #357fcf;
   background-image: -moz-linear-gradient(top, #357fcf, #357fcf);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#357fcf), to(#357fcf));
@@ -54,57 +96,6 @@ body.pull_top {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF357fcf', endColorstr='#FF357fcf', GradientType=0);
   border-color: #252525;
 }
-
-.carousel {
-  margin-bottom: 60px;
-}
-
-.carousel .container {
-  position: relative;
-  z-index: 9;
-}
-
-.carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-  background-color: transparent;
-  border: 0;
-}
-
-.carousel .item {
-  height: 416px;
-  /* height: 500px; */
-}
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 416px;
-  /* height: 500px; */
-}
-
-.carousel-caption {
-  background-color: transparent;
-  position: static;
-  max-width: 550px;
-  padding: 0 20px;
-  margin-top: 200px;
-}
-.carousel-caption h1,
-.carousel-caption .lead {
-  margin: 0;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-.carousel-caption .btn {
-  margin-top: 10px;
-}
-
-
 
 /* mixins, variables, etc. */
 

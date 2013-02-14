@@ -1,11 +1,37 @@
-<h1>Users#show</h1><br />
-<h2>User: <%= @user.email %></h2>
+<br />
+<hr />
+<p class="lead">User: <%= @user.email %></p>
 
-<h3> Number of Allocations: <%= @user.allocations.count %> </h3>
+<p class="text-info"> Number of Allocations: <%= @user.allocations.count %> </p>
+
+<hr />
 
 <% if @user.allocations.any? %>
-  <h3>Number of Allocations (<%= @user.allocations.count %>)</h3>
-  <ol>
-    <%= render @user.allocations %>
-  </ol>
+
+<table id="allocations" class="table table-striped table-bordered table-hover">
+<thead>
+  <tr>
+    <th>Allocated at</th>
+    <th>Deallocated at</th>
+    <th>Bandwidth Used</th>
+    <th>Requested Lifetime</th>
+    <th>Allotted lifetime</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+<tbody>
+  <% @user.allocations.each do |allocation| %>
+  <tr>
+    <td><%= allocation.alloc_at %></td>
+    <td><%= allocation.dealloc_at %></td>
+    <td><%= allocation.bandwidth_used %></td>
+    <td><%= allocation.req_lifetime %></td>
+    <td><%= allocation.allotted_lifetime %></td>
+    <td><%= 'Active' %></td>
+  </tr>
+  <% end %>
+</tbody>
+
+</table>
 <% end %>
