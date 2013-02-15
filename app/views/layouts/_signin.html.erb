@@ -1,8 +1,9 @@
 <%= form_for(resource, :html => { :class => "form" }, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-<fieldset>
-  <legend> Sign In </legend>
-<div class="control-group">
+  <fieldset>
+    <legend> Sign In </legend>
+
+    <div class="control-group">
 
       <!-- Text input-->
       <label class="control-label" for="user_email">Email address</label>
@@ -12,17 +13,17 @@
       </div>
     </div>
 
-<div class="control-group">
+    <div class="control-group">
 
       <!-- Text input-->
       <label class="control-label" for="user_password">Password</label>
       <div class="controls">
-        <input id="user_password" name="user[password]" placeholder="password" class="input-xlarge" type="text">
+        <input id="user_password" name="user[password]" placeholder="password" class="input-xlarge" type="password">
         <p class="help-block"></p>
       </div>
     </div>
 
-<div class="control-group">
+    <div class="control-group">
 
       <!-- Checkboxes-->
       <label class="control-label"></label>
@@ -35,7 +36,7 @@
 
     </div>
 
-<div class="control-group">
+    <div class="control-group">
       <label class="control-label"></label>
 
       <!-- Button -->
@@ -44,7 +45,7 @@
       </div>
     </div>
 
-</fieldset>
+  </fieldset>
 
 <% end %>
 
