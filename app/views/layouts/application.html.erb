@@ -14,15 +14,21 @@
     <link rel="apple-touch-icon" sizes="114x114" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png">
   </head>
   <body>
-      <!-- <body class="pull_top"> -->
-    <%= render 'layouts/messages' %>
-    <%= render 'layouts/header' %>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <%= yield %>
-        <%= render 'layouts/footer' %>
-        <%= debug(params) if Rails.env.development? %>
+    <div id="mywrap">
+      <div id="container">
+      <%= render 'layouts/messages' %>
+      <%= render 'layouts/header' %>
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <%= yield %>
+        </div>
+      </div>
+      <div id="mypush"></div>
       </div>
     </div>
+    <div id="myfooter">
+      <%= render 'layouts/footer' %>
+    </div>
+    <!-- <%= debug(params) if Rails.env.development? %> -->
   </body>
 </html>
