@@ -1,0 +1,34 @@
+
+<% if @user.allocations.any? %>
+
+<table id="allocations" class="table table-striped table-bordered table-hover">
+<thead>
+  <tr>
+    <th>No</th>
+    <th>Allocated at</th>
+    <th>Deallocated at</th>
+    <th>Bandwidth Used</th>
+    <th>Requested Lifetime</th>
+    <th>Allotted lifetime</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+<% i = 0 %>
+<tbody>
+  <% @user.allocations.each do |allocation| %>
+  <% i += 1 %>
+  <tr>
+    <td><%= i %></td>
+    <td><%= allocation.alloc_at %></td>
+    <td><%= allocation.dealloc_at %></td>
+    <td><%= allocation.bandwidth_used %></td>
+    <td><%= allocation.req_lifetime %></td>
+    <td><%= allocation.allotted_lifetime %></td>
+    <td><%= 'Active' %></td>
+  </tr>
+  <% end %>
+</tbody>
+
+</table>
+<% end %>
