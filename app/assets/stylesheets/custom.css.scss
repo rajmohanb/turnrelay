@@ -11,6 +11,11 @@ body.pull_top {
   padding: 9px 91px;
 }
 
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-color: rgb(209, 255, 255);
+}
+
 #allocations1 {
   font-size: 85%;
   td {
@@ -81,7 +86,8 @@ body.pull_top {
 }
 
 .navbar-inverse .navbar-inner {
-  background-color: #357fcf;
+  /* background-color: #357fcf; */
+  background-color: #005596;
   background-image: -moz-linear-gradient(top, #357fcf, #357fcf);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#357fcf), to(#357fcf));
   background-image: -webkit-linear-gradient(top, #357fcf, #357fcf);

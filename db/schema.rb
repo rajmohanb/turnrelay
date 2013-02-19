@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205094338) do
+ActiveRecord::Schema.define(:version => 20130219050254) do
 
   create_table "allocations", :force => true do |t|
     t.string   "username"
@@ -49,6 +49,11 @@ ActiveRecord::Schema.define(:version => 20130205094338) do
     t.string   "password"
     t.integer  "def_lifetime"
     t.integer  "max_bandwidth"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "allocs"
+    t.integer  "active_allocs"
+    t.integer  "bandwidth_used"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
