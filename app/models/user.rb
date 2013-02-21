@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :max_allocs, :max_concur_allocs, :realm, :username, :password
+  attr_accessible :max_allocs, :max_concur_allocs, :realm, :username, :turn_secret
   attr_accessible :def_lifetime, :max_bandwidth
-  # attr_accessible :title, :body
+  attr_accessible :first_name, :last_name
   
   # association with the allocations model
   has_many :allocations, dependent: :destroy

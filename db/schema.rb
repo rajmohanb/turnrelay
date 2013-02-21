@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130219050254) do
+ActiveRecord::Schema.define(:version => 20130221050307) do
 
   create_table "allocations", :force => true do |t|
     t.string   "username"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(:version => 20130219050254) do
     t.integer  "max_concur_allocs"
     t.string   "realm"
     t.string   "username"
-    t.string   "password"
+    t.string   "turn_secret"
     t.integer  "def_lifetime"
     t.integer  "max_bandwidth"
     t.string   "first_name"

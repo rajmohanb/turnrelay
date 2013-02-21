@@ -2,14 +2,15 @@ Turnrelay::Application.routes.draw do
 
   devise_for :users
 
-  # devise_for :users, :controllers => { :registrations => "users" } do
+  #devise_for :user do
+  #   get "sign_in", :to => "devise/sessions#new"
   #   get "/login", :to => "devise/sessions#new"
   #   get "/register", :to => "devise/registrations#new"
   #   get "/logout", :to => "devise/sessions#destroy"
   #   get '/account' => 'devise/registrations#edit'
-  # end
+  #end
 
-  resources  :users, only: [:show]
+  resources  :users, only: [:show, :edit, :update]
 
   root :to => 'site#home'
 
