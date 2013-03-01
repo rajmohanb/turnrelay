@@ -7,12 +7,13 @@ gem 'devise', '2.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-#   gem 'sqlite3', '1.3.5'
+  # gem 'sqlite3', '1.3.5'
   gem 'rspec-rails', '2.11.0'
+  gem 'capistrano'
 end
 
 # group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg', '0.14.1'
 # end
 
 # Gems used only for assets and not required
