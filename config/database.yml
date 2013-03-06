@@ -17,3 +17,12 @@ test:
   username: turnrelay
   password: turnrelay
 
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: turnrelay_production
+  pool: 5
+  username: turnrelay
+  password: turnrelay
+
+
