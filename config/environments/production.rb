@@ -69,12 +69,12 @@ Turnrelay::Application.configure do
   config.action_mailer.default_url_options = { :host => '54.235.81.165' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      :address => "smtpout.secureserver.com", 
-      :domain => 'www.mindbricks.com',
-      :user_name => 'welcome@mindbricks.com',
-      :password => 'adidiya1',
-      :port => 80, 
-      :authentication => :plain
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587, # ports 25 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "rajmohanbanavi@gmail.com",
+    :password  => "Fcx7G2yMlHi5-Gp-K6pB9w", # SMTP password is any valid API key
+    :authentication => 'login' # Mandrill supports 'plain' or 'login'
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
