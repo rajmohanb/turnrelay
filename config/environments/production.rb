@@ -66,14 +66,17 @@ Turnrelay::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
  
   # for devise
-  config.action_mailer.default_url_options = { :host => 'mindbricks.com' }
+  config.action_mailer.default_url_options = { :host => '54.235.81.165' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address => "smtpout.secureserver.com", 
+      :domain => 'www.mindbricks.com',
       :user_name => 'welcome@mindbricks.com',
       :password => 'adidiya1',
-      :port => 25, 
-      :domain => 'mindbricks.com' 
+      :port => 80, 
+      :authentication => :plain
   }
- 
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
 end
