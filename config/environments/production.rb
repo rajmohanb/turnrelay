@@ -71,7 +71,7 @@ Turnrelay::Application.configure do
   config.action_mailer.smtp_settings = {
       :address => "smtpout.secureserver.com", 
       :user_name => 'welcome@mindbricks.com',
-      :password => 'adidiya1'
+      :password => 'adidiya1',
       :port => 25, 
       :domain => 'mindbricks.com' 
   }
