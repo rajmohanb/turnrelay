@@ -3,14 +3,16 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
-    # logger.fatal "This is the sign in url: #{sign_in_url}"
+    #logger.fatal "This is the sign in url: #{sign_in_url}"
     if request.referer == sign_in_url
-      logger.fatal "Yeah! this is sign in url"
+      #logger.fatal "Yeah! this is sign in url"
       user_path(current_user)
       # super
     else
-      logger.fatal "This is the user path: #{current_user} : #{user_url(current_user)}"
-      stored_location_for(resource) || request.referer || user_url(resource)
+      #logger.fatal "This is the user path: #{current_user} : #{user_url(current_user)}"
+      #logger.fatal "This is the stored resource path: #{stored_location_for(resource)}"
+      #logger.fatal "This is the referrer path: #{request.referrer}"
+      user_url(resource) || stored_location_for(resource) || request.referer
     end
   end
   
