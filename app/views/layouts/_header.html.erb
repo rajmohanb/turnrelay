@@ -21,6 +21,8 @@
                 <li><%= link_to "Change Password", edit_user_registration_path %></li>
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
+                <li><%= link_to "Delete Account", registration_path(current_user), :confirm => "Are you sure?", :method => :delete %></li>
+                <li class="divider"></li>
                 <li><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
               </ul>
             </li>
