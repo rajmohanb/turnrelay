@@ -11,6 +11,7 @@ Turnrelay::Application.routes.draw do
   #end
 
   resources  :users, only: [:show, :edit, :update]
+  resources  :messages, only: [:new, :create]
 
   root :to => 'site#home'
 
@@ -19,7 +20,7 @@ Turnrelay::Application.routes.draw do
   match '/pricing',   to:'site#pricing'
   match '/blog',      to:'site#blog'
 
-  match '/contact',   to:'site#contact'
+  match '/contact',   to:'messages#new'
   match '/about',     to:'site#about'
 
   match '/privacy',   to:'site#privacy'
