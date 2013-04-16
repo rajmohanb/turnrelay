@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
   
   # association with the allocations model
   has_many :allocations, dependent: :destroy
+
+  def to_param
+    [id, first_name.parameterize, last_name.parameterize].join("-")
+  end
 end
