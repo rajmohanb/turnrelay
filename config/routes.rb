@@ -11,6 +11,7 @@ Turnrelay::Application.routes.draw do
   #end
 
   resources  :users, only: [:show, :edit, :update]
+  #resources  :users, :path => '', only: [:show, :edit, :update]
   resources  :messages, only: [:new, :create]
 
   root :to => 'site#home'

@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     else
       # print the errors to the development log
       Rails.logger.info(@user.errors.messages.inspect)
-      # flash[:error] = "Something wrong? Profile NOT updated"
+      flash[:error] = "Something wrong? Profile NOT updated"
       render 'edit'
     end
   end
