@@ -7,8 +7,9 @@
     <th>No</th>
     <th>Allocated at</th>
     <th>Deallocated at</th>
-    <th>Bandwidth Used</th>
-    <th>Requested Lifetime</th>
+    <th>Ingress Bandwidth</th>
+    <th>Egress Bandwidth</th>
+    <th>Total Bandwidth Used</th>
     <th>Allotted lifetime</th>
     <th>Status</th>
   </tr>
@@ -22,8 +23,9 @@
     <td><%= i %></td>
     <td><%= allocation.alloc_at %></td>
     <td><%= allocation.dealloc_at %></td>
-    <td><%= allocation.bandwidth_used %></td>
-    <td><%= allocation.req_lifetime %></td>
+    <td><%= allocation.ingress_data %></td>
+    <td><%= allocation.egress_data %></td>
+    <td><%= allocation.total_relay %></td>
     <td><%= allocation.allotted_lifetime %></td>
     <td><%= 'Active' %></td>
   </tr>

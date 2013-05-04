@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420182311) do
+ActiveRecord::Schema.define(:version => 20130503181906) do
 
   create_table "allocations", :force => true do |t|
     t.string   "username"
@@ -25,9 +25,23 @@ ActiveRecord::Schema.define(:version => 20130420182311) do
     t.datetime "updated_at",                     :null => false
     t.integer  "user_id"
     t.integer  "alloc_handle",      :limit => 8
+    t.integer  "ingress_data"
+    t.integer  "egress_data"
+    t.integer  "total_relay"
   end
 
   add_index "allocations", ["user_id"], :name => "index_allocations_on_user_id"
+
+  create_table "roles", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
