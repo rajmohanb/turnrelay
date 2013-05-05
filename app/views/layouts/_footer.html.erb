@@ -1,13 +1,21 @@
 <footer class="footer">
-  <nav>
-    <ull>
-      <li><small><%= link_to "Privacy", privacy_path %></small></li>
-      <li><small><%= link_to "Terms of Service", terms_path %></small></li>
-    </ull>
-    <li><small><a href="http://www.mindbricks.com/">Designed and built by MindBricks</a> @2013 All rights reserved.</small></li>
-    <ul>
-      <li><small><%= link_to "Contact", contact_path %></small></li>
-      <li><small><%= link_to "About", about_path %></small></li>
-    </ul>
-  </nav>
+
+<div class="navbar-inner navbar">
+  <div class="container" style="height:60p;">
+    <div class="nav-collapse">
+      <ul class="nav pull-right" style="margin-top:13px">
+        <li><small><%= link_to "Privacy", privacy_path %></small></li>
+        <li><small><%= link_to "Terms of Service", terms_path %></small></li>
+        <li><small><%= link_to "Contact", contact_path %></small></li>
+        <li><small><%= link_to "About", about_path %></small></li>
+      </ul>
+      <center>
+        <span class="muted span4 offset3" style="margin-top:12px;"><small>
+              Designed and built by MindBricks Technologies <br> &copy; 2009-2013 All Rights Reserved
+        </small></span>
+      </center>
+    </div>
+  </div>
+</div>
+
 </footer>

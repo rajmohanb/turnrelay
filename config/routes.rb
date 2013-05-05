@@ -10,8 +10,13 @@ Turnrelay::Application.routes.draw do
   #   get '/account' => 'devise/registrations#edit'
   #end
 
-  resources  :users, only: [:show, :edit, :update]
-  #resources  :users, :path => '', only: [:show, :edit, :update]
+  # resources  :users, only: [:show, :edit, :update]
+  # resources  :users, :path => '', only: [:show, :edit, :update]
+  resources  :users, only: [:show, :edit, :update] do
+    #resources  :users, :path => '', only: [:show, :edit, :update]
+    resources :allocations, only: [:show]
+  end
+ 
   resources  :messages, only: [:new, :create]
 
   root :to => 'site#home'
