@@ -10,7 +10,7 @@
     <th>Ingress Bandwidth</th>
     <th>Egress Bandwidth</th>
     <th>Total Bandwidth Used</th>
-    <th>Allotted lifetime</th>
+    <th>Protocol</th>
     <th>Status</th>
   </tr>
 </thead>
@@ -26,7 +26,7 @@
     <td><%= allocation.ingress_data %></td>
     <td><%= allocation.egress_data %></td>
     <td><%= allocation.total_relay %></td>
-    <td><%= allocation.allotted_lifetime %></td>
+    <td><%= allocation.protocol %></td>
     <td><%= 'Active' %></td>
   </tr>
   <% end %>

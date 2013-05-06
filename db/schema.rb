@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503181906) do
+ActiveRecord::Schema.define(:version => 20130506224855) do
 
   create_table "allocations", :force => true do |t|
     t.string   "username"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20130503181906) do
     t.integer  "ingress_data"
     t.integer  "egress_data"
     t.integer  "total_relay"
+    t.string   "protocol"
   end
 
   add_index "allocations", ["user_id"], :name => "index_allocations_on_user_id"
