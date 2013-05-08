@@ -27,7 +27,11 @@
     <td><%= allocation.egress_data %></td>
     <td><%= allocation.total_relay %></td>
     <td><%= allocation.protocol %></td>
-    <td><%= 'Active' %></td>
+    <td><%= if allocation.dealloc_at.blank? 
+                'Active' 
+            else 
+                'Deallocated' 
+            end %></td>
   </tr>
   <% end %>
 </tbody>
