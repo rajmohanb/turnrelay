@@ -7,4 +7,4 @@ for NAT traversal and adopted by mang WGs such as WebRTC.
 This application will reside along with the TURN/STUN server and provide the 
 ability for the users to manage their TURN accounts.
 
-Note: This is an old rails application based on rails 3
+Note: This is an old rails application based on rails 3, no longer maintained/updated.
